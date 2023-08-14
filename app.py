@@ -3,7 +3,7 @@ from fastai.vision.all import *
 import pathlib
 import plotly.express as px
 
-st.title('Transportni klassifikatsiya qiluvchi model')
+st.title('Transportni klassifikatsiya qiluvchi model: Airplane, Car, Boat')
 
 file = st.file_uploader('Rasm yuklang', type=['png', 'jpg', 'jpeg'])
 
@@ -18,3 +18,6 @@ if file is not None:
 
     flg=px.bar(x=model.dls.vocab, y=probs)
     st.plotly_chart(flg)
+
+
+st.markdown('''Developed by Nurmuhammad Mashrapov''')
